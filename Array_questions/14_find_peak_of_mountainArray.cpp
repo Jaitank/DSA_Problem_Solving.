@@ -56,7 +56,7 @@ int peakIndexInMountainArray(vector<int> arr)
 
 int main()
 {
-    vector<int> arr = {0,1,2,10,5,56,34,23,23};
+    vector<int> arr = {0,1,2,10,15,56,34,23,22};
     int ans = peakIndexInMountainArray(arr);
 
     cout<<ans;
