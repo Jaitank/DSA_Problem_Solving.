@@ -47,7 +47,7 @@ int peakIndexInMountainArray(vector<int> arr)
         }
         else    // here control comes if arr[mid] greater than its next element means it is on right
         {         // side of peak or can be peak so now we have to take our end on this mid;
-            e = mid;   // here we cant do e = mid-1; bcoz it can be possible that e is peak.
+            e = mid;   // here we cant do e = mid-1; bcoz it can be possible that mid is peak.
         }
         mid = s + (e - s) / 2; // as usual mid updation
     }
