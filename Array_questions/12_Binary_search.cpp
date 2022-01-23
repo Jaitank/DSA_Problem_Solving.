@@ -16,10 +16,10 @@ int binarySearch(int arr[], int size, int key) // Time complexity of O(log N) It
     int end = size-1;
     while (start <= end)
     {
-        int mid = (start+end)/2;
-        if (arr[mid] == key)
-        {
-            return mid;
+        int mid = start + (end-start)/2; // we avoid here mid = (start + end)/2 because, if some whe                                     
+        if (arr[mid] == key)         // int value is at it max then for both start and end then
+        {                           // it exceeds size limit of int. so its good practice to use
+            return mid;           // always mid = start + (end-start)/2.
         }
 
         else if ( arr[mid] < key)
