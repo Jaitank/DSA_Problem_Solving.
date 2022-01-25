@@ -23,4 +23,7 @@ int main()
         cout<<arr[i]<<" ";
     }
     return 0;
+
+    // Time Complexity:  Best case and Worst case : O(n^2)
+    // Use Case: When size of array is small then this will effective.
 }
