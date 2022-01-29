@@ -67,7 +67,8 @@ char maxOccuring_char(string s)
     // at the end we get the the maximum count in maxi. now we have to return its index respective character
     // means if maxi is at index 4 then character is 'd'
 
-    char finalAns = 'a' + ans ;   // now we add 'a' in max count index so that we get character. suppose it is 4 then 'a'+ 4 = d
+    char finalAns = 'a' + ans ;   // now we add 'a' in max count index so that we get character. eg: 'a' + 0 = 'a',
+                                 // 'a' + 1 = b suppose ans is 3 then 'a'+ 3 = d.
 
     return finalAns;
 }
