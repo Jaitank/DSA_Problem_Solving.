@@ -4,6 +4,13 @@ using namespace std;
 // Here we have to print our 2d array in spiral way 
 // check question description here: https://leetcode.com/problems/spiral-matrix/submissions/
 
+/*
+Approach: When we are analysing that printing, we have found that we have to print in 4 ways:
+           1. Print startingRow and then shifts startingRow to down, then
+           2. Print  endingcOl and then shifts endingCol to its left, then
+           3. Print endingRow and then shifts endingRow to up, then
+           4. Print startingCol and then shifts startingCol to its right, and that's it.
+*/
 vector<int> spiralOrder(vector<vector<int>> &matrix)
 {
 
