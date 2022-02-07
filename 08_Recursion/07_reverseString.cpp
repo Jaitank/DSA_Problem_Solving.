@@ -20,7 +20,7 @@ void reverseString(string &S, int st, int end) // two pointer approach in recurs
 void reverseString_2(string &str, int i)      // using formula size - i - 1 (more optimised)
 {
     // base condition
-    if (i > str.size() - i - 1)
+    if (i > str.size() - i - 1) // by using formula
     {
         return;
     }

@@ -24,7 +24,7 @@ int main()
 {
     string S = "sis";
 
-    // reverseString(S, 0, S.size() - 1);
+    // reverseString(S, 0, S.size() - 1); formula
 
     if(checkPalindrome(S, 0))
     {

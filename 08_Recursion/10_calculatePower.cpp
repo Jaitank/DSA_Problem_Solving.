@@ -13,14 +13,13 @@ int getPower(int a, int b)
         return a;
 
     // Recursive Call
-    int ans = getPower(a,b/2);
-    
+    int ans = getPower(a, b / 2); // calculate ans
+
     // if b is even
-    if(b%2 == 0)
+    if (b % 2 == 0)
         return ans * ans;
     else
         return a * ans * ans;
-    
 }
 int main()
 {
@@ -31,6 +30,6 @@ int main()
     int b;
     cin >> b;
 
-    cout << "Power of (a,b) is : " << getPower(a,b);
+    cout << "Power of (a,b) is : " << getPower(a, b);
     return 0;
 }
