@@ -1,4 +1,4 @@
-// Task: Find element in array using recursion
+// Task: Find element in array using recursion - linear search
 
 #include <bits/stdc++.h>
 using namespace std;
