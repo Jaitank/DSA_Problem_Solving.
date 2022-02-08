@@ -56,6 +56,6 @@ bool checkPalindrome_2(long long N)
 
 int main()
 {
-
+    
     return 0;
 }

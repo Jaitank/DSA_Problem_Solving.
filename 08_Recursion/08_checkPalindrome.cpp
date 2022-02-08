@@ -28,7 +28,7 @@ int main()
 
     if(checkPalindrome(S, 0))
     {
-        cout << "This is Palindrome";
+        cout << "This is Palindrome ";
     }
     else
     {

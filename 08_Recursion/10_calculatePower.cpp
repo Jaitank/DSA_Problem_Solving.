@@ -12,6 +12,7 @@ int getPower(int a, int b)
     if (b == 1)
         return a;
 
+
     // Recursive Call
     int ans = getPower(a, b / 2); // calculate ans
 
