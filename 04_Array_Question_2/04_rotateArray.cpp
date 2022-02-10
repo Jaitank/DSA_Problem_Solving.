@@ -15,15 +15,20 @@ void rotate(vector<int> &nums, int k)
     
     }
 
-    // for left rotation
-    // int mod = k % size;
-    // int temp[size];
-    // for (int i = 0; i < size; i++)
-    // {
+    /*
+
+    left rotation ->
+    
+    int size = nums.size();
+    int mod = k % size;
+    int temp[size];
+    for (int i = 0; i < size; i++)
+    {
         
-    //   temp[i] = (arr[(mod + i) % size]);
+      temp[i] = (arr[(mod + i) % size]);
         
-    // }
+    }
+    */
 
     // Copying the temp in nums
     nums = temp;
