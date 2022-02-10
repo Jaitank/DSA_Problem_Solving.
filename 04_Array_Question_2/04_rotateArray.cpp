@@ -5,6 +5,8 @@ void rotate(vector<int> &nums, int k)
 {
     vector<int> temp(nums.size());
 
+    // right roatation
+
     for (int i = 0; i < nums.size(); i++)
     {
         temp[(i + k) % nums.size()] = nums[i];     // cyclic rotation happens by that formula. suppose we have on 'n' so if now we have to shift
@@ -12,6 +14,16 @@ void rotate(vector<int> &nums, int k)
                     // and n = 6(array size), so (5+2) % 6 => 1, so by that last index's value is shifted to index '1'
     
     }
+
+    // for left rotation
+    // int mod = k % size;
+    // int temp[size];
+    // for (int i = 0; i < size; i++)
+    // {
+        
+    //   temp[i] = (arr[(mod + i) % size]);
+        
+    // }
 
     // Copying the temp in nums
     nums = temp;
