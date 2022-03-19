@@ -1,5 +1,7 @@
 //Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
+// link : https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1#
 
+// !! Solve that question also with time complexity O(n) & space complexity O(n) later.
 #include <bits/stdc++.h>
 using namespace std;
 
