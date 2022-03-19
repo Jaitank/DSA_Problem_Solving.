@@ -24,7 +24,7 @@ int main()
 {
     Hero Huzefa; // Object creation and default constructor( which do not accept input parameters) is called.
 
-    Huzefa.Level = 'A'; //  Like this we can't access the Health because that is public data member, so for that we have to use getter and setter.
+    Huzefa.Level = 'A'; //  Like this we can't access the Health because that is private data member, so for that we have to use getter and setter.
     Huzefa.setHealth(90);
     // Accessing data-members
     cout << "Level of huzefa is : "<<  Huzefa.Level << endl;
