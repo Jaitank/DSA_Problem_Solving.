@@ -1,3 +1,6 @@
+// Singly linked list creation, traversal, insertion and deletion operations.
+// Learn destructor function used in deletion 
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -91,6 +94,50 @@ void travereLinkedList(Node* &head)
 
     cout << endl;
 }
+
+void deleteNode(int position, Node * & head, Node * & tail)
+{
+    if(position == 1)
+    {
+        // deleting starting or first node
+        Node * temp = head;
+        head = head -> next; // just point head to next node of first and then free the node
+
+        // memory free for starting node
+        temp -> next = NULL;
+        delete temp;
+    }
+    else
+    {
+
+        
+        // deleting middle or last node
+        // here we have to maintain two pointer, one for node which we wanna delete, and for its just pvs node.
+        Node *curr = head;
+        Node *prev = NULL;
+        
+        int cnt = 1;
+        while(cnt < position) // traverse curr pointer to the node which has to be delete, and prev to its previous one. 
+        {
+            prev = curr;
+            curr = curr -> next;
+            cnt++;
+        }
+
+        if(curr -> next == NULL){
+            prev -> next = NULL;
+            tail = prev;
+        }
+
+        prev -> next = curr -> next; // now make prev node linked with next node of nodetodelete(which is pointed by curr).
+        
+        curr -> next = NULL;
+        delete curr; // the free memory of that curr node
+
+    }
+}
+
+
 int main()
 {
     // creating a node dynamically
@@ -130,6 +177,15 @@ int main()
 
     cout << "head :" << head -> data << endl;
     cout << "tail :" << tail -> data << endl;
+
+    deleteNode(6 ,head, tail);
+
+    cout << "After deletion :";
+    travereLinkedList(head);
+
+    cout << "head :" << head -> data << endl;
+    cout << "tail :" << tail -> data << endl;
+
 
 
     return 0;
