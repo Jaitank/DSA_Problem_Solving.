@@ -137,6 +137,51 @@ void deleteNode(int position, Node * & head, Node * & tail)
     }
 }
 
+void deleteNodebyValue(int value, Node *&head, Node *&tail)
+{
+    Node *curr = head;
+    Node *prev = NULL;
+
+    while (curr->next != NULL)
+    {
+        // if deletion has to be perfomed at starting or first node.
+        if (head->data == value)
+        {
+            Node *temp = head;
+            head = head->next;
+            curr = head;
+            temp->next = NULL;
+            delete temp; // delete the node
+            // after deleting update curr and prev pointer to go further
+            prev = curr;
+            curr = curr ->next;
+        }
+        // if deletion is not for starting node then
+        else
+        {
+            if (curr->data == value) 
+            {
+                Node *temp2 = curr;
+                prev->next = curr->next;
+                curr = curr->next;
+                temp2->next = NULL;
+                delete temp2;
+            }
+            else
+            {   // shifting prev and curr
+                prev = curr;
+                curr = curr->next;
+            }
+        }
+    }
+    if (curr->data == value)
+    {
+        tail = prev;
+        tail->next = NULL;
+        delete curr;
+    }
+}
+
 
 int main()
 {
@@ -152,8 +197,9 @@ int main()
 
     // insert new node at head
     cout << "When inserting at head : ";
+    insertAtHead(head,15);
     insertAtHead(head, 12);
-    insertAtHead(head, 15);
+    insertAtHead(head, 12);
 
     
     travereLinkedList(head);
@@ -161,7 +207,7 @@ int main()
     // insert new node at tail
     cout << "When inserting at tail : ";
     insertAtTail(tail, 8);
-    insertAtTail(tail, 6);
+    insertAtTail(tail, 12);
 
 
     travereLinkedList(head);
@@ -178,7 +224,9 @@ int main()
     cout << "head :" << head -> data << endl;
     cout << "tail :" << tail -> data << endl;
 
-    deleteNode(6 ,head, tail);
+    // deleteNode(6 ,head, tail);  // deletion wrt position
+
+    deleteNodebyValue(12, head, tail); // deletion wrt to value
 
     cout << "After deletion :";
     travereLinkedList(head);
