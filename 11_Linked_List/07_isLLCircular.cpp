@@ -1,4 +1,4 @@
-// Find mid of linked list
+// Checking LL is circular or not
 #include <bits/stdc++.h>
 using namespace std;
 class Node
