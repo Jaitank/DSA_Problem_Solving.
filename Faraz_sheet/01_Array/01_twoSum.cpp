@@ -24,7 +24,7 @@ vector<int> twoSum_byUnorderedMap(vector<int> &numbers, int target)
 
 		hash[numbers[i]] = i;
 	}
-	return {};
+	return {}; // means there is no ans;
 }
 
 /* 
