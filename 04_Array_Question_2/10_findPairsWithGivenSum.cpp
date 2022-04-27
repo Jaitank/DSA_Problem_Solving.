@@ -1,11 +1,11 @@
 //Given an array of N integers, and an integer K, find the number of pairs of elements in the array whose sum is equal to K.
 // link : https://practice.geeksforgeeks.org/problems/count-pairs-with-given-sum5022/1#
 
-// !! Solve that question also with time complexity O(n) & space complexity O(n) later.
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int getPairsCount(int arr[], int n, int k)
+int getPairsCount(int arr[], int n, int k) // tc- o(n2)
 {
     /* two pointer approach - iterating all pairs.
      iterate pointer -  "end" till it is equal to st + 1, so that we get all pair for that st,
@@ -41,6 +41,22 @@ int getPairsCount(int arr[], int n, int k)
     return count;
 }
 
+
+int getPairsCount2(int arr[], int n, int k) //TC- O(n) and SC= O(1)
+{
+    if (n == 1)
+        return 0;
+    unordered_map<int, int> umap;
+    int ans = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        ans += umap[k - arr[i]];
+        umap[arr[i]]++;
+    }
+    return ans;
+}
+
 int main()
 {
     int arr[9] = {1,2,3,4,5,6,7,8,9};
@@ -48,5 +64,7 @@ int main()
     int k = 8;
 
     cout << getPairsCount(arr, n, k);
+
+
     return 0;
 }
