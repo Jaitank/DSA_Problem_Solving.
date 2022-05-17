@@ -3,6 +3,8 @@
 #include "001Tree.h"
 using namespace std;
 
+// calculate only left leaves sum , so make a flag which tells  us we are not left or not
+
 class Solution
 {
 public:
