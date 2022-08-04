@@ -32,7 +32,7 @@ public:
             // 1 child
             
             //left child
-            if(root -> left != NULL && root -> right == NULL)
+            else if(root -> left != NULL && root -> right == NULL)
             {
                 Node* temp = root -> left;
                 delete root;
@@ -40,7 +40,7 @@ public:
             }
             
             //right
-            if(root -> left == NULL && root -> right != NULL)
+            else if(root -> left == NULL && root -> right != NULL)
             {
                 Node* temp = root -> right;
                 delete root;
@@ -48,7 +48,7 @@ public:
             }
             
             // 2 child
-            if(root -> left != NULL && root -> right != NULL)
+            else if(root -> left != NULL && root -> right != NULL)
             {
                 // from here we can set left's part maxdataue or right part mindataue
                 // lets set rights part mindataue here
